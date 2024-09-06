@@ -1,52 +1,52 @@
-/* Reset some default styles */
-body, h1, h2, h3, p {
+/* Reset default styles */
+body, h1, h2, h3, p, ul, li, nav {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Set up the body font and general layout */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #111; /* Dark background color for the whole page */
-    color: #eee; /* Light text color for contrast */
+    background: #111;
+    color: #eee;
+    overflow-x: hidden;
 }
 
 header {
-    background: #1e1e1e; /* Dark metallic background for the header */
-    color: #fff;
+    background: #021121;
     padding: 1rem 0;
-    border-bottom: 2px solid #333; /* Slightly lighter border for a metallic look */
+    border-bottom: 2px solid #333;
 }
 
+/* Flexbox layout for header container */
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
-}
-.logo img {
-    width: 50px; /* Adjust the size of your logo */
-    height: auto;
-    margin-right: 0.2rem; /* Space between logo and text */
+    padding: 0 2rem;
 }
 
-header h1 {
-    font-size: 2rem;
-    color: #ffcc00; /* A bright color for the heading to stand out */
-    margin: 0; /* Remove default margin to reduce space */
-    display: flex; /* Use flexbox to align logo and text vertically */
-    align-items: center; /* Center align text with the logo vertically */
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 50px;
+    margin-right: 10px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 nav ul li {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 nav ul li a {
@@ -56,21 +56,24 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Highlight links on hover */
+    color: #ffcc00;
 }
 
+/* Hero section styling */
 .hero {
-    background: #222; /* Dark metallic background for the hero section */
-    padding: 2rem 0;
+    background: #222;
     text-align: center;
+    padding: 4rem 1rem;
 }
 
 .hero h2 {
+    color: #ffcc00;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #ffcc00; /* Bright color for the hero heading */
 }
 
 .hero p {
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
@@ -78,38 +81,86 @@ button {
     background: #333;
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 button:hover {
-    background: #555; /* Slightly lighter background on hover */
+    background: #555;
 }
 
+/* Features section */
 .features {
-    padding: 2rem 0;
+    padding: 3rem 1rem;
+    background: #181818;
 }
 
 .features .container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: space-around;
 }
 
 .feature {
-    flex: 1;
-    margin: 0 1rem;
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
     text-align: center;
+    flex: 1;
+    min-width: 250px; /* Ensures flexibility for smaller screens */
 }
 
 .feature h3 {
-    color: #ffcc00; /* Bright color for feature headings */
+    color: #ffcc00;
+    margin-bottom: 1rem;
 }
 
 footer {
-    background: #1e1e1e; /* Dark metallic background for the footer */
+    background: #1e1e1e;
     color: #fff;
-    padding: 1rem 0;
     text-align: center;
-    border-top: 2px solid #333; /* Slightly lighter border for a metallic look */
+    padding: 1.5rem;
+    border-top: 2px solid #333;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .headerRight ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .features .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
