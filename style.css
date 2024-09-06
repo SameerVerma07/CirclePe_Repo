@@ -1,0 +1,115 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #111; /* Dark background color for the whole page */
+    color: #eee; /* Light text color for contrast */
+}
+
+header {
+    background: #1e1e1e; /* Dark metallic background for the header */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 2px solid #333; /* Slightly lighter border for a metallic look */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.logo img {
+    width: 50px; /* Adjust the size of your logo */
+    height: auto;
+    margin-right: 0.2rem; /* Space between logo and text */
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #ffcc00; /* A bright color for the heading to stand out */
+    margin: 0; /* Remove default margin to reduce space */
+    display: flex; /* Use flexbox to align logo and text vertically */
+    align-items: center; /* Center align text with the logo vertically */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Highlight links on hover */
+}
+
+.hero {
+    background: #222; /* Dark metallic background for the hero section */
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+    color: #ffcc00; /* Bright color for the hero heading */
+}
+
+.hero p {
+    margin-bottom: 2rem;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #555; /* Slightly lighter background on hover */
+}
+
+.features {
+    padding: 2rem 0;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.feature h3 {
+    color: #ffcc00; /* Bright color for feature headings */
+}
+
+footer {
+    background: #1e1e1e; /* Dark metallic background for the footer */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 2px solid #333; /* Slightly lighter border for a metallic look */
+}
